@@ -9,27 +9,26 @@ public class MenuView {
 	
 	public static void printMenu() {
 	
-		System.out.println("**********************");
-		System.out.println("*BIENVENIDO A FLIXNET*");
-		System.out.println("**********************");
-		System.out.println("¿QUE QUIERES VER HOY?");
-		System.out.println("**********************");
-		System.out.println("");
-		
-		for (int i = 0; i < App.playList.length; i++) {
-			if(App.playList[i]!=null){
-				//TODO cambiar casting
-				System.out.println(i+"-"+((Film)App.playList[i]).getName());
-			}
+		System.out.println("\n---------FLIXNET----------------\nQue pelicula quieres ver: ");
+		  for (int i = 0; i < App.playList.length; i++) {
+			  if(App.playList[i]!=null) {
+				  System.out.println(i + "-" + ((Film)App.playList[i]).getName());
+			  }
+			
 		}
 		
 		@SuppressWarnings("resource")
 		Scanner scanner= new Scanner(System.in);
 		int opcion=scanner.nextInt();
 		
-		App.controller.play(App.playList[opcion]);
 		
+		App.controller.play(App.playList[opcion]);
 		MenuView.printMenu();
+		  
+		 
+		
+		
+		
 		
 	}
 
