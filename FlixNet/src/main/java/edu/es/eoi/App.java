@@ -6,11 +6,15 @@ import edu.es.eoi.interfaces.Playable;
 import edu.es.eoi.service.PlayService;
 import edu.es.eoi.view.MenuView;
 
+/*
+ * Sergio Vizcaino
+ */
+
 public class App {
 	
 	public static Playable[] playList= new Playable[10];
 	public static PlayService service= new PlayService();
-	public static PlayController controller= new PlayController();	
+	public static PlayController controller= new PlayController(service);	
 
 	public static void main(String[] args) {
 	
@@ -24,10 +28,10 @@ public class App {
 		film1.setName("El hobbit: un viaje inesperado");
 		
 		Film film2 = new Film();
-		film2.setName("El hobbit: la desolaciÃ³n de Smaug");
+		film2.setName("El hobbit: la desolación de Smaug");
 		
 		Film film3 = new Film();
-		film3.setName("El Hobbit: la batalla de los cinco ejÃ©rcitos");
+		film3.setName("El Hobbit: la batalla de los cinco ejércitos");
 		
 		playList[0]=film1;
 		playList[1]=film2;
