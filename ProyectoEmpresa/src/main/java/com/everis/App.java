@@ -11,7 +11,7 @@ public class App {
 		// Creamos empleados en la empresa
 
 		empresa.nuevoEmpleado("SERGIO", 25000);
-		empresa.nuevoEmpleado("JJ", 25000);
+		empresa.nuevoEmpleado("PEPE", 25000);
 
 		// Imprimimos por pantalla la Lista Empleados
 		
